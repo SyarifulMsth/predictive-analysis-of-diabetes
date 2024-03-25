@@ -1,4 +1,6 @@
-# Predictive Analytics of Diabetes
+
+# Diabetes Predictive Analytics
+
 Building machine learning models for predictive analytics.
 
 ![Image](https://julianhealthcare.com/wp-content/uploads/2019/07/Diabetes.jpg)
@@ -75,47 +77,38 @@ Data preparation adalah proses mempersiapkan data mentah menjadi format yang ses
 - Cleaning Data 
 	Cleaning data merupakan tahapan dalam data wrangling yang dilakukan dengan tujuan untuk memastikan data tidak mempengaruhi hasil dari analisis atau model machine learning yang dibuat kedepannya. Karena data yang kotor akan menimbulkan bias pada hasil analisis atau model yang tidak akurat. Pada project ini tahapan cleaning data dilakukan meliputi pembersihan missing value apabila ada, duplicated data, menangani outliers, mengangani imbalanced data, dan melakukan standardization. 
 	- Melihat jumlah baris dan jumlah kolom
-	
+ 	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture1.PNG?raw=true" alt="anemia"></p>    
 	- Melihat data format dan type
-	
+	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture2.PNG?raw=true" alt="anemia"></p>
 	- Missing data 
-	
+	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture3.PNG?raw=true" alt="anemia"></p>
 	- Duplicated data
-	
+	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture4.PNG?raw=true" alt="anemia"></p>
 	- Menampilkan ringkasan statistik dari DataFrame
-	
-	- Outliers 
-		Memeriksa apakah ada outliers dengan menggunakan boxplot. 
-	
-		GAMBAR  
+	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture5.PNG?raw=true" alt="anemia"></p>
+- Outliers 
+Memeriksa apakah ada outliers dengan menggunakan boxplot. 
+<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/outliersBefore.png?raw=true" alt="anemia"></p>	Menangani outliers dengan menggunakan metode IQR (Inter Quartile Range). IQR tells us the variation in the data set.Any value, which is beyond the range of -1.5 x IQR to 1.5 x IQR treated as outliers.
+![iqr](https://dicoding-web-img.sgp1.digitaloceanspaces.com/original/academy/dos:4943e2b65e16d68cf187164fae50174b20231012141616.png)
+
+Result after handling outliers : 
+<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/outliersAfter.png?raw=true" alt="anemia"></p>
+
+- Imbalance data
+<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/imbalancedBefore.png?raw=true" alt="anemia"></p> Based on the image of comparing the number of people with diabetes and non-diabetes, it can be seen that the number of data for people with diabetes is only 34.9% and non-diabetes is 65.1%. This indicates that the data is not balanced (imbalance data). So it is necessary to handle imbalanced data, because unbalanced data can result in bias in the model and accuracy results can be inaccurate. There are two methods for dealing with imbalance data, namely oversampling and undersampling, depending on the case and dataset you have.
+	- Oversampling: Used when we have a small dataset and want to sample more minority classes. Oversampling with SMOTE can help improve model accuracy because it does not lose data, but it can increase the risk of overfitting if not managed properly.
+ 	- Undersampling: Used when we have a large dataset and want to reduce the number of majority class samples. Undersampling can help reduce training time and improve class balance, but it can reduce useful information if majority class samples are randomly removed.
+
+In this case, we will apply the oversamling method because the dataset used is in the small category, so using this method can make the dataset balanced. Pada project ini metode yang digunakan yaitu Oversampling menggunakan SMOTE (Synthetic Minority Over-sampling Technique): SMOTE digunakan untuk membuat sampel sintetis dari kelas minoritas (dalam hal ini, kelas "1" dari kolom 'Outcome') agar jumlahnya seimbang dengan kelas mayoritas. Ini membantu mencegah model machine learning menjadi terlalu condong ke arah kelas mayoritas dan meningkatkan performa model untuk kelas minoritas. 
 		
-		Menangani outliers dengan menggunakan metode IQR (Inter Quartile Range). IQR tells us the variation in the data set.Any value, which is beyond the range of -1.5 x IQR to 1.5 x IQR treated as outliers.
-		GAMBAR 
-		
-		
-		GAMBAR Sesudah 
-	
-	- Imbalance data
-		Gambar pie 
-		Based on the image of comparing the number of people with diabetes and non-diabetes, it can be seen that the number of data for people with diabetes is only 34.9% and non-diabetes is 65.1%. This indicates that the data is not balanced (imbalance data). So it is necessary to handle imbalanced data, because unbalanced data can result in bias in the model and accuracy results can be inaccurate.
-		
-		There are two methods for dealing with imbalance data, namely oversampling and undersampling, depending on the case and dataset you have.
+Result after handling imbalanced datasets
+<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/imbalancedAfter.png?raw=true" alt="anemia"></p>	
 
-  
+- Standardization
+<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/featureScaling.png?raw=true" alt="anemia"></p>	Standardisasi adalah proses mengubah data sehingga memiliki mean (rata-rata) nol dan varians (ragam) satu. Tujuan dari standardisasi adalah untuk membuat distribusi data menjadi lebih terpusat di sekitar nilai nol dengan variabilitas yang seragam, yang dapat membantu algoritma machine learning dalam memahami dan memproses data dengan lebih baik. Pada kasus ini StandardScaler dalam scikit-learn digunakan untuk melakukan standardisasi z-score.
 
-Oversampling: Used when we have a small dataset and want to sample more minority classes. Oversampling with SMOTE can help improve model accuracy because it does not lose data, but it can increase the risk of overfitting if not managed properly.
-
-  
-
-Undersampling: Used when we have a large dataset and want to reduce the number of majority class samples. Undersampling can help reduce training time and improve class balance, but it can reduce useful information if majority class samples are randomly removed.
-
-In this case, we will apply the oversamling method because the dataset used is in the small category, so using this method can make the dataset balanced.
-
-		Pada project ini metode yang digunakan yaitu Oversampling menggunakan SMOTE (Synthetic Minority Over-sampling Technique): SMOTE digunakan untuk membuat sampel sintetis dari kelas minoritas (dalam hal ini, kelas "1" dari kolom 'Outcome') agar jumlahnya seimbang dengan kelas mayoritas. Ini membantu mencegah model machine learning menjadi terlalu condong ke arah kelas mayoritas dan meningkatkan performa model untuk kelas minoritas. 
-	
-		GAMBAR sesudah 
-	- Standardization
-	Standardisasi adalah proses mengubah data sehingga memiliki mean (rata-rata) nol dan varians (ragam) satu. Tujuan dari standardisasi adalah untuk membuat distribusi data menjadi lebih terpusat di sekitar nilai nol dengan variabilitas yang seragam, yang dapat membantu algoritma machine learning dalam memahami dan memproses data dengan lebih baik. Pada kasus ini StandardScaler dalam scikit-learn digunakan untuk melakukan standardisasi z-score.
+- Data Splitting 
+<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/datasplitting.PNG?raw=true" alt="anemia"></p> Data splitting adalah proses membagi dataset menjadi dua atau lebih bagian yang berbeda untuk digunakan dalam tahap tertentu dari proses analisis data, seperti pelatihan model, validasi model, dan pengujian model. Pada project ini data splitting menggunakan metode Train-test split. Train-test split adalah teknik pembagian dataset menjadi dua bagian: satu untuk melatih model (training set) dan yang lainnya untuk menguji model (test set).
 
 
 ## 🎯 Modeling 
