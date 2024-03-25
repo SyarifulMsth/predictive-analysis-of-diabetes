@@ -1,12 +1,10 @@
-
-
 # Diabetes Predictive Analytics
 
 Building machine learning models for predictive analytics.
 
 ![Image](https://julianhealthcare.com/wp-content/uploads/2019/07/Diabetes.jpg)
 
-## 🏷️Metodologi 
+## 🏷️ Methodology 
 
 The project management methodology used in this project is CRISP-DM. This methodology is one of several methodologies that are often used in the industrial world. Apart from CRISP-DM, there are several project management methodologies, namely Ad Hoc, Waterfall, Agile Scrum & Kanban. 
 
@@ -17,7 +15,7 @@ CRISP-DM (Cross Industry Standard Process for Data Mining) is an approach that d
 ## 🧭 Project Domain
 Domain yang akan dibahas pada project machine learning (*predictive analytics*) ini adalah di bidang **Kesehatan**.
 
-### Latar Belakang
+### Background 
 Lifestyle and socio-economic changes due to urbanization and modernization, especially in large cities in Indonesia, have become the main factors causing the increase in the prevalence of degenerative diseases. Several types of degenerative diseases include Diabetes Mellitus (DM), coronary heart disease, hypertension, hyperlipidemia, and others.
 
 Diabetes Mellitus is a common disease in Indonesia. According to the International Diabetes Federation (IDF), Indonesia is ranked 7th out of 10 countries with the highest number of Diabetes Mellitus patients. In 2020, the number of Diabetes Mellitus patients in Indonesia reached 6.2 percent or the equivalent of 10.8 million people and is expected to continue to increase every year.
@@ -31,9 +29,10 @@ The application of predictive analytics in predicting Diabetes Mellitus is impor
 Daftar referensi : 
 1. [Hubungan Antara Kepatuhan Minum Obat Pasien Diabetes Mellitus dan Support yang Diberikan Keluarga](https://jurnal.stikessalsabila.ac.id/index.php/jikd/article/view/79/72)
 2. [Diabetes melitus](https://juke.kedokteran.unila.ac.id/index.php/juke/article/download/396/397)
+3. [Analisis Faktor Resiko Penyebab Terjadinya Diabetes Melitus Tipe 2 Pada Wanita usia Produktif Di Puskesmas Wawonasa](https://ejournal.unsrat.ac.id/index.php/ebiomedik/article/view/4554)
 
 
-## Business Understanding 
+## 📌 Business Understanding 
 
 ### Problem Statement 
 Diabetes Mellitus is one of the degenerative diseases whose prevalence continues to increase, including in Indonesia. The main problem faced is the difficulty in detecting and preventing diabetes early, which can lead to serious complications if not addressed properly.
@@ -67,29 +66,29 @@ The following is a table containing details of the Diabetes Dataset dataset:
 | Outcome | Class variable (0 or 1) |
 
 ## 📚 Data Preparation 
-Data preparation adalah proses mempersiapkan data mentah menjadi format yang sesuai untuk analisis atau pemrosesan lebih lanjut. Berikut adalah beberapa teknik atau metode yang digunakan dalam data preparation pada project ini : 
+Data preparation is the process of preparing raw data into a suitable format for further analysis or processing. The following are several techniques or methods used in data preparation on this project:
 
 - Gathering Data 
-	Gathering data merupakan tahapan awal pada proses data wrangling. Tahapan ini dilakukan dengan mengumpulkan data yang akan digunakan dalam project machine learning. Pada project ini dataset yang digunakan merupakan data eksternal yang bersumber dari [Kaggle](https://www.kaggle.com/) dan bersifat open-source. Data yang telah diperoleh kemudian diakses atau dibaca dengan menggunakan function yang ada di pandas, yaitu dengan function read_csv().
+Gathering data is the initial stage in the data wrangling process. This stage is carried out by collecting data that will be used in the machine learning project. In this project the dataset used is external data sourced from [Kaggle](https://www.kaggle.com/) and is open-source. The data that has been obtained is then accessed or read using the function in Pandas, namely the read_csv() function.
 	
 - Assesing Data 
-	Assesing data merupakan tahapan dalam data wrangling yang bertujuan untuk mengidentifikasi masalah yang terdapat dalam data dan memastikan data yang digunakan berkualitas. Pada tahapan ini dilakukan identifikasi dataset, termasuk mengecek apakah dataset yang digunakan terdapat missing value, duplicated data, invalid data, inconsistent data, Outliers, dan permasalahan lainnya yang dapat menimbulkan bias pengembangan model machine learning.
+Assessing data is a stage in data wrangling which aims to identify problems contained in the data and ensure the quality of the data used. At this stage, dataset identification is carried out, including checking whether the dataset used contains missing values, duplicated data, invalid data, inconsistent data, outliers, and other problems that can cause bias in the development of machine learning models.
 	
 - Cleaning Data 
-	Cleaning data merupakan tahapan dalam data wrangling yang dilakukan dengan tujuan untuk memastikan data tidak mempengaruhi hasil dari analisis atau model machine learning yang dibuat kedepannya. Karena data yang kotor akan menimbulkan bias pada hasil analisis atau model yang tidak akurat. Pada project ini tahapan cleaning data dilakukan meliputi pembersihan missing value apabila ada, duplicated data, menangani outliers, mengangani imbalanced data, dan melakukan standardization. 
-	- Melihat jumlah baris dan jumlah kolom
+Cleaning data is a stage in data wrangling which is carried out with the aim of ensuring that the data does not affect the results of the analysis or machine learning models that are created in the future. Because dirty data will cause bias in analytical results or inaccurate models. In this project, the data cleaning stages include cleaning missing values ​​if any, duplicated data, handling outliers, handling imbalanced data, and carrying out standardization.
+	- View the number of rows and number of columns
  	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture1.PNG?raw=true" alt="Diabetes"  width="300"></p>    
-	- Melihat data format dan type
+	- View data format and type
 	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture2.PNG?raw=true" width="300"></p>
 	- Missing data 
 	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture3.PNG?raw=true " width="300" ></p>
 	- Duplicated data
 	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture4.PNG?raw=true"  width="300"></p>
-	- Menampilkan ringkasan statistik dari DataFrame
+	- Displays summary statistics from a DataFrame
 	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture5.PNG?raw=true"  width="300"></p>
 - Outliers <br>
-Memeriksa apakah ada outliers dengan menggunakan boxplot. 
-<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/outliersBefore.png?raw=true"></p> Menangani outliers dengan menggunakan metode IQR (Inter Quartile Range). IQR tells us the variation in the data set.Any value, which is beyond the range of -1.5 x IQR to 1.5 x IQR treated as outliers.
+Check if there are outliers by using a boxplot. 
+<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/outliersBefore.png?raw=true"></p> Handle outliers using the IQR (Inter Quartile Range) method. IQR tells us the variation in the data set. Any value, which is beyond the range of -1.5 x IQR to 1.5 x IQR is treated as outliers.
 ![iqr](https://dicoding-web-img.sgp1.digitaloceanspaces.com/original/academy/dos:4943e2b65e16d68cf187164fae50174b20231012141616.png)
 Result after handling outliers :
 <br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/outliersAfter.png?raw=true"  ></p>
@@ -97,44 +96,55 @@ Result after handling outliers :
 - Imbalance data
 <br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/imbalancedBefore.png?raw=true" ></p> Based on the image of comparing the number of people with diabetes and non-diabetes, it can be seen that the number of data for people with diabetes is only 34.9% and non-diabetes is 65.1%. This indicates that the data is not balanced (imbalance data). So it is necessary to handle imbalanced data, because unbalanced data can result in bias in the model and accuracy results can be inaccurate. There are two methods for dealing with imbalance data, namely oversampling and undersampling, depending on the case and dataset you have.
 	- Oversampling: Used when we have a small dataset and want to sample more minority classes. Oversampling with SMOTE can help improve model accuracy because it does not lose data, but it can increase the risk of overfitting if not managed properly.
- 	- Undersampling: Used when we have a large dataset and want to reduce the number of majority class samples. Undersampling can help reduce training time and improve class balance, but it can reduce useful information if majority class samples are randomly removed.<br><br>In this case, we will apply the oversamling method because the dataset used is in the small category, so using this method can make the dataset balanced. Pada project ini metode yang digunakan yaitu Oversampling menggunakan SMOTE (Synthetic Minority Over-sampling Technique): SMOTE digunakan untuk membuat sampel sintetis dari kelas minoritas (dalam hal ini, kelas "1" dari kolom 'Outcome') agar jumlahnya seimbang dengan kelas mayoritas. Ini membantu mencegah model machine learning menjadi terlalu condong ke arah kelas mayoritas dan meningkatkan performa model untuk kelas minoritas.
+ 	- Undersampling: Used when we have a large dataset and want to reduce the number of majority class samples. Undersampling can help reduce training time and improve class balance, but it can reduce useful information if majority class samples are randomly removed.<br><br>In this case, we will apply the oversamling method because the dataset used is in the small category, so using this method can make the dataset balanced. In this project, the method used is Oversampling using SMOTE (Synthetic Minority Over-sampling Technique): SMOTE is used to create synthetic samples from the minority class (in this case, class "1" from the 'Outcome' column) so that the number is balanced with the majority class. This helps prevent the machine learning model from being too skewed towards the majority class and improves model performance for the minority class.<br><br>
     Result after handling imbalanced datasets
     <br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/imbalancedAfter.png?raw=true"  width="300"></p>	
 
 - Standardization
-<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/featureScaling.png?raw=true" ></p>	Standardisasi adalah proses mengubah data sehingga memiliki mean (rata-rata) nol dan varians (ragam) satu. Tujuan dari standardisasi adalah untuk membuat distribusi data menjadi lebih terpusat di sekitar nilai nol dengan variabilitas yang seragam, yang dapat membantu algoritma machine learning dalam memahami dan memproses data dengan lebih baik. Pada kasus ini StandardScaler dalam scikit-learn digunakan untuk melakukan standardisasi z-score.
+<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/featureScaling.png?raw=true" ></p>	Standardization is the process of changing data so that it has a mean (average) of zero and a variance (variance) of one. The goal of standardization is to make the data distribution more centered around the zero value with uniform variability, which can help machine learning algorithms understand and process the data better. In this case StandardScaler in scikit-learn is used to standardize z-scores.
 
 - Data Splitting 
-Data splitting adalah proses membagi dataset menjadi dua atau lebih bagian yang berbeda untuk digunakan dalam tahap tertentu dari proses analisis data, seperti pelatihan model, validasi model, dan pengujian model. Pada project ini data splitting menggunakan metode Train-test split. Train-test split adalah teknik pembagian dataset menjadi dua bagian: satu untuk melatih model (training set) dan yang lainnya untuk menguji model (test set).
-
+Data splitting is the process of dividing a dataset into two or more different parts for use in certain stages of the data analysis process, such as model training, model validation, and model testing. In this project, data splitting uses the Train-test split method. Train-test split is a technique for dividing a dataset into two parts: one for training the model (training set) and the other for testing the model (test set).
 
 ## 🎯 Modeling 
-Pada project ini algoritma machine learning yang digunakan yaitu  Logistic Regression, K-Nearest Neighbors (KNN), Decision Tree Classifier, and Random forest classification.
+In this project the machine learning algorithms used are Logistic Regression, K-Nearest Neighbors (KNN), Decision Tree Classifier, and Random forest classification.
 
-- Logistic Regression adalah model statistik yang menggunakan fungsi logistik, atau fungsi logit, dalam matematika sebagai persamaan antara x dan y. Fungsi logit memetakan y sebagai fungsi sigmoid dari x. Kelebihan dari model ini adalah mudah dipahami dan diimplementasikan. Cocok untuk pemodelan data biner (dua kelas).
+- Logistic Regression is a statistical model that uses the logistic function, or logit function, in mathematics as the equality between x and y. The logit function maps y as a sigmoid function of x. The advantage of this model is that it is easy to understand and implement. Suitable for modeling binary data (two classes).
 ![image](https://d1.awsstatic.com/sigmoid.bfc853980146c5868a496eafea4fb79907675f44.png)
 ![image](https://d1.awsstatic.com/S-curve.36de3c694cafe97ef4e391ed26a5cb0b357f6316.png)
-Berikut adalah penerapan algorimta pada project ini : 
+The following is the application of the algorithm in this project:
 	> LogisticRegression(max_iter=1000)
-	
 
-- K-Nearest Neighbors (KNN) adalah KNN  adalah algoritma yang relatif sederhana dibandingkan dengan algoritma lain. Algoritma  KNN  menggunakan ‘kesamaan fitur’ untuk memprediksi nilai dari setiap data yang baru. Dengan kata lain, setiap data baru diberi nilai berdasarkan seberapa mirip titik tersebut dalam set pelatihan.
-KNN  bekerja dengan membandingkan jarak satu sampel ke sampel pelatihan lain dengan memilih sejumlah k tetangga terdekat (dengan k adalah sebuah angka positif). Nah, itulah mengapa algoritma ini dinamakan K-nearest neighbor (sejumlah k tetangga terdekat).  KNN  bisa digunakan untuk kasus klasifikasi dan regresi. Kelebihan dari algoritma ini adalah sederhana dan intuitif. Cocok untuk dataset yang tidak terlalu besar dan tidak memiliki struktur yang kompleks. Pada project ini parameter yang digunakan sebagai berikut : 
+- K-Nearest Neighbors (KNN) is a relatively simple algorithm compared to other algorithms. The KNN algorithm uses 'feature similarity' to predict the value of each new data. In other words, each new data is assigned a value based on how similar the points are in the training set.
+KNN works by comparing the distance of one sample to another training sample by selecting k nearest neighbors (where k is a positive number). Well, that's why this algorithm is called K-nearest neighbors (a number of k nearest neighbors). KNN can be used for classification and regression cases. The advantage of this algorithm is that it is simple and intuitive. Suitable for datasets that are not too large and do not have a complex structure. In this project the parameters used are as follows: 
 	> KNeighborsClassifier(n_neighbors=11, p=2, metric='euclidean')
 
 	![image](https://miro.medium.com/v2/resize:fit:640/format:webp/0*2_qzcm2gSe9l67aI.png)
 
-- Decision Tree Classifier merupakan struktur pohon yang terdiri dari node-node yang merepresentasikan keputusan dan cabang-cabang yang merepresentasikan konsekuensi dari keputusan tersebut. Setiap node dalam decision tree merepresentasikan variabel dalam dataset yang mempengaruhi keputusan dan konsekuensi tersebut. Kelebihan dari algoritma ini adalah Mudah dipahami dan dapat menangani data kategorikal serta numerik. Memungkinkan interpretasi visual. Pada project ini parameter yang digunakan adalah sebagai berikut : 
+- Decision Tree Classifier is a tree structure consisting of nodes that represent decisions and branches that represent the consequences of those decisions. Each node in the decision tree represents a variable in the dataset that influences the decision and its consequences. The advantage of this algorithm is that it is easy to understand and can handle categorical and numerical data. Allows visual interpretation. In this project the parameters used are as follows:
 	> DecisionTreeClassifier(random_state=42)
 
 	![image](https://images.datacamp.com/image/upload/v1677504957/decision_tree_for_heart_attack_prevention_2140bd762d.png)
   
-	Decision tree menjadi salah satu model machine learning yang paling populer dan paling sering digunakan dalam problem klasifikasi dan regresi. Digunakan untuk memecah data menjadi subset-subset yang semakin kecil dan homogen hingga didapatkan suatu hasil atau keputusan. 
-
-- Random Forest Classification adalah model ensemble yang terdiri dari banyak decision tree yang bekerja bersama untuk meningkatkan kinerja dan akurasi prediksi. Model ini mengurangi overfitting dibandingkan dengan decision tree tunggal dan dapat menangani dataset besar dengan banyak fitur. Namun, Random Forest memerlukan lebih banyak waktu untuk pelatihan karena kompleksitas model, dan kurang dapat diinterpretasikan dibandingkan dengan decision tree tunggal. Kelebihan dari algoritma ini adalah dapat mengatasi masalah overfitting yang umum terjadi pada decision tree. Mampu menangani dataset yang besar dengan banyak fitur. Berikut adalah parameter yang digunakan pada project ini : 
+	Decision trees are one of the most popular machine learning models and are most often used in classification and regression problems. Used to divide data into smaller and more homogeneous subsets until a result or decision is obtained.
+	
+- Random Forest Classification is an ensemble model consisting of many decision trees that work together to improve prediction performance and accuracy. This model reduces overfitting compared to a single decision tree and can handle large datasets with many features. However, Random Forest requires more time to train due to the complexity of the model, and is less interpretable compared to a single decision tree. The advantage of this algorithm is that it can overcome the overfitting problem that commonly occurs in decision trees. Able to handle large datasets with many features. The following are the parameters used in this project : 
 	> RandomForestClassifier(n_estimators=100)
 	
 	![image](https://blog.myskill.id/wp-content/uploads/2023/10/972e598f-8afe-4e6a-91d6-4799fba0a55f_2224x1053.png)
+
+## 📈 Evaluation 
+Pada project ini evaluasi model menggunakan Classification Report. The classification report is part of the scikit-learn module in python. It is report containing the key metrics in a classification problem and showing the quality of the predictions.
+
+The classification report visualizer displays the precision, recall, F1, and support scores for the model.
+- **Precision —** The percentage of correctly classified results among that class.
+- **Recall —** The number of true positive cases found over the total number of positive cases found (true positives + false negatives).
+- **F1-score —**  The harmonic mean of precision and recall. The F1-score will always be between 1.00 and 0.00 with 1.00 being the best score.
+- **Support —** The number of occurrences of the class in the dataset.
+
+Based on the results of the analysis and development of machine learning models that have been carried out, the machine learning model with the best accuracy and evaluation results is the **Random Forest Classifier** algorithm.
+ 
+<p align="center"><img src="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/accuracy.PNG?raw=true" height="200px" style="display:block; margin:auto;"></p>
 
 
 ## Daftar Pustaka
