@@ -50,7 +50,7 @@ Diabetes Mellitus is one of the degenerative diseases whose prevalence continues
 4.  Evaluating models and selecting the best model based on appropriate evaluation metrics.
 
 ## 📚 Data Understanding 
-Dataset yang digunakan pada project machine learning ini adalah [Diabetes dataset]() yang bersumber dari Kaggle. Dataset tersebut berformat csv (comma-separated values) dengan ukuran 23.3 kB. The dataset consists of 768 data records with 9 features. 
+Dataset yang digunakan pada project machine learning ini adalah [Diabetes dataset](https://www.kaggle.com/datasets/mathchi/diabetes-data-set) yang bersumber dari Kaggle. Dataset tersebut berformat csv (comma-separated values) dengan ukuran 23.3 kB. The dataset consists of 768 data records with 9 features. 
 The following is a table containing details of the Diabetes Dataset dataset:
 
 | Feature | Description |
