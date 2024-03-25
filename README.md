@@ -1,4 +1,5 @@
 
+
 # Diabetes Predictive Analytics
 
 Building machine learning models for predictive analytics.
@@ -77,50 +78,67 @@ Data preparation adalah proses mempersiapkan data mentah menjadi format yang ses
 - Cleaning Data 
 	Cleaning data merupakan tahapan dalam data wrangling yang dilakukan dengan tujuan untuk memastikan data tidak mempengaruhi hasil dari analisis atau model machine learning yang dibuat kedepannya. Karena data yang kotor akan menimbulkan bias pada hasil analisis atau model yang tidak akurat. Pada project ini tahapan cleaning data dilakukan meliputi pembersihan missing value apabila ada, duplicated data, menangani outliers, mengangani imbalanced data, dan melakukan standardization. 
 	- Melihat jumlah baris dan jumlah kolom
- 	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture1.PNG?raw=true" alt="anemia"></p>    
+ 	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture1.PNG?raw=true" alt="Diabetes"  width="300"></p>    
 	- Melihat data format dan type
-	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture2.PNG?raw=true" alt="anemia"></p>
+	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture2.PNG?raw=true" width="300"></p>
 	- Missing data 
-	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture3.PNG?raw=true" alt="anemia"></p>
+	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture3.PNG?raw=true " width="300" ></p>
 	- Duplicated data
-	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture4.PNG?raw=true" alt="anemia"></p>
+	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture4.PNG?raw=true"  width="300"></p>
 	- Menampilkan ringkasan statistik dari DataFrame
-	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture5.PNG?raw=true" alt="anemia"></p>
-- Outliers 
+	<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/Capture5.PNG?raw=true"  width="300"></p>
+- Outliers <br>
 Memeriksa apakah ada outliers dengan menggunakan boxplot. 
-<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/outliersBefore.png?raw=true" alt="anemia"></p>	Menangani outliers dengan menggunakan metode IQR (Inter Quartile Range). IQR tells us the variation in the data set.Any value, which is beyond the range of -1.5 x IQR to 1.5 x IQR treated as outliers.
+<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/outliersBefore.png?raw=true"></p> Menangani outliers dengan menggunakan metode IQR (Inter Quartile Range). IQR tells us the variation in the data set.Any value, which is beyond the range of -1.5 x IQR to 1.5 x IQR treated as outliers.
 ![iqr](https://dicoding-web-img.sgp1.digitaloceanspaces.com/original/academy/dos:4943e2b65e16d68cf187164fae50174b20231012141616.png)
-
-Result after handling outliers : 
-<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/outliersAfter.png?raw=true" alt="anemia"></p>
+Result after handling outliers :
+<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/outliersAfter.png?raw=true"  ></p>
 
 - Imbalance data
-<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/imbalancedBefore.png?raw=true" alt="anemia"></p> Based on the image of comparing the number of people with diabetes and non-diabetes, it can be seen that the number of data for people with diabetes is only 34.9% and non-diabetes is 65.1%. This indicates that the data is not balanced (imbalance data). So it is necessary to handle imbalanced data, because unbalanced data can result in bias in the model and accuracy results can be inaccurate. There are two methods for dealing with imbalance data, namely oversampling and undersampling, depending on the case and dataset you have.
+<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/imbalancedBefore.png?raw=true" ></p> Based on the image of comparing the number of people with diabetes and non-diabetes, it can be seen that the number of data for people with diabetes is only 34.9% and non-diabetes is 65.1%. This indicates that the data is not balanced (imbalance data). So it is necessary to handle imbalanced data, because unbalanced data can result in bias in the model and accuracy results can be inaccurate. There are two methods for dealing with imbalance data, namely oversampling and undersampling, depending on the case and dataset you have.
 	- Oversampling: Used when we have a small dataset and want to sample more minority classes. Oversampling with SMOTE can help improve model accuracy because it does not lose data, but it can increase the risk of overfitting if not managed properly.
- 	- Undersampling: Used when we have a large dataset and want to reduce the number of majority class samples. Undersampling can help reduce training time and improve class balance, but it can reduce useful information if majority class samples are randomly removed.
-
-In this case, we will apply the oversamling method because the dataset used is in the small category, so using this method can make the dataset balanced. Pada project ini metode yang digunakan yaitu Oversampling menggunakan SMOTE (Synthetic Minority Over-sampling Technique): SMOTE digunakan untuk membuat sampel sintetis dari kelas minoritas (dalam hal ini, kelas "1" dari kolom 'Outcome') agar jumlahnya seimbang dengan kelas mayoritas. Ini membantu mencegah model machine learning menjadi terlalu condong ke arah kelas mayoritas dan meningkatkan performa model untuk kelas minoritas. 
-		
-Result after handling imbalanced datasets
-<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/imbalancedAfter.png?raw=true" alt="anemia"></p>	
+ 	- Undersampling: Used when we have a large dataset and want to reduce the number of majority class samples. Undersampling can help reduce training time and improve class balance, but it can reduce useful information if majority class samples are randomly removed.<br><br>In this case, we will apply the oversamling method because the dataset used is in the small category, so using this method can make the dataset balanced. Pada project ini metode yang digunakan yaitu Oversampling menggunakan SMOTE (Synthetic Minority Over-sampling Technique): SMOTE digunakan untuk membuat sampel sintetis dari kelas minoritas (dalam hal ini, kelas "1" dari kolom 'Outcome') agar jumlahnya seimbang dengan kelas mayoritas. Ini membantu mencegah model machine learning menjadi terlalu condong ke arah kelas mayoritas dan meningkatkan performa model untuk kelas minoritas.
+    Result after handling imbalanced datasets
+    <br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/imbalancedAfter.png?raw=true"  width="300"></p>	
 
 - Standardization
-<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/featureScaling.png?raw=true" alt="anemia"></p>	Standardisasi adalah proses mengubah data sehingga memiliki mean (rata-rata) nol dan varians (ragam) satu. Tujuan dari standardisasi adalah untuk membuat distribusi data menjadi lebih terpusat di sekitar nilai nol dengan variabilitas yang seragam, yang dapat membantu algoritma machine learning dalam memahami dan memproses data dengan lebih baik. Pada kasus ini StandardScaler dalam scikit-learn digunakan untuk melakukan standardisasi z-score.
+<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/featureScaling.png?raw=true" ></p>	Standardisasi adalah proses mengubah data sehingga memiliki mean (rata-rata) nol dan varians (ragam) satu. Tujuan dari standardisasi adalah untuk membuat distribusi data menjadi lebih terpusat di sekitar nilai nol dengan variabilitas yang seragam, yang dapat membantu algoritma machine learning dalam memahami dan memproses data dengan lebih baik. Pada kasus ini StandardScaler dalam scikit-learn digunakan untuk melakukan standardisasi z-score.
 
 - Data Splitting 
-<br><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/datasplitting.PNG?raw=true" alt="anemia"></p> Data splitting adalah proses membagi dataset menjadi dua atau lebih bagian yang berbeda untuk digunakan dalam tahap tertentu dari proses analisis data, seperti pelatihan model, validasi model, dan pengujian model. Pada project ini data splitting menggunakan metode Train-test split. Train-test split adalah teknik pembagian dataset menjadi dua bagian: satu untuk melatih model (training set) dan yang lainnya untuk menguji model (test set).
+Data splitting adalah proses membagi dataset menjadi dua atau lebih bagian yang berbeda untuk digunakan dalam tahap tertentu dari proses analisis data, seperti pelatihan model, validasi model, dan pengujian model. Pada project ini data splitting menggunakan metode Train-test split. Train-test split adalah teknik pembagian dataset menjadi dua bagian: satu untuk melatih model (training set) dan yang lainnya untuk menguji model (test set).
 
 
 ## 🎯 Modeling 
 Pada project ini algoritma machine learning yang digunakan yaitu  Logistic Regression, K-Nearest Neighbors (KNN), Decision Tree Classifier, and Random forest classification.
 
-- Logistic Regression adalah model sederhana dan mudah diinterpretasikan yang digunakan untuk memprediksi probabilitas terjadinya suatu peristiwa berdasarkan variabel input. Model ini cocok untuk pemodelan hasil biner dan cepat dalam pelatihan dan penggunaannya untuk dataset besar. Namun, model ini mungkin tidak berperforma baik pada masalah yang kompleks dengan banyak fitur atau interaksi, dan rentan terhadap overfitting.
+- Logistic Regression adalah model statistik yang menggunakan fungsi logistik, atau fungsi logit, dalam matematika sebagai persamaan antara x dan y. Fungsi logit memetakan y sebagai fungsi sigmoid dari x. Kelebihan dari model ini adalah mudah dipahami dan diimplementasikan. Cocok untuk pemodelan data biner (dua kelas).
+![image](https://d1.awsstatic.com/sigmoid.bfc853980146c5868a496eafea4fb79907675f44.png)
+![image](https://d1.awsstatic.com/S-curve.36de3c694cafe97ef4e391ed26a5cb0b357f6316.png)
+Berikut adalah penerapan algorimta pada project ini : 
+	> LogisticRegression(max_iter=1000)
+	
 
-- K-Nearest Neighbors (KNN) adalah model yang intuitif dimana ia memprediksi hasil dengan membandingkan data baru dengan titik data yang ada dalam dataset, memilih label mayoritas dari k tetangga terdekatnya. Meskipun mudah dipahami dan diimplementasikan, KNN memerlukan memori besar untuk menyimpan semua data dan dapat lambat untuk dataset besar, serta sensitif terhadap pencilan.
+- K-Nearest Neighbors (KNN) adalah KNN  adalah algoritma yang relatif sederhana dibandingkan dengan algoritma lain. Algoritma  KNN  menggunakan ‘kesamaan fitur’ untuk memprediksi nilai dari setiap data yang baru. Dengan kata lain, setiap data baru diberi nilai berdasarkan seberapa mirip titik tersebut dalam set pelatihan.
+KNN  bekerja dengan membandingkan jarak satu sampel ke sampel pelatihan lain dengan memilih sejumlah k tetangga terdekat (dengan k adalah sebuah angka positif). Nah, itulah mengapa algoritma ini dinamakan K-nearest neighbor (sejumlah k tetangga terdekat).  KNN  bisa digunakan untuk kasus klasifikasi dan regresi. Kelebihan dari algoritma ini adalah sederhana dan intuitif. Cocok untuk dataset yang tidak terlalu besar dan tidak memiliki struktur yang kompleks. Pada project ini parameter yang digunakan sebagai berikut : 
+	> KNeighborsClassifier(n_neighbors=11, p=2, metric='euclidean')
 
-- Decision Tree Classifier membagi dataset menjadi subset yang lebih kecil berdasarkan fitur-fitur tertentu, dan membuat keputusan berdasarkan struktur pohon yang terbentuk. Model ini mudah dipahami dan diinterpretasikan, tidak memerlukan normalisasi data, dan dapat menangani data kategorikal dan numerik. Namun, decision tree rentan terhadap overfitting dan tidak stabil, karena perubahan kecil dalam data dapat menghasilkan pohon yang berbeda.
+	![image](https://miro.medium.com/v2/resize:fit:640/format:webp/0*2_qzcm2gSe9l67aI.png)
 
-- Random Forest Classification adalah model ensemble yang terdiri dari banyak decision tree yang bekerja bersama untuk meningkatkan kinerja dan akurasi prediksi. Model ini mengurangi overfitting dibandingkan dengan decision tree tunggal dan dapat menangani dataset besar dengan banyak fitur. Namun, Random Forest memerlukan lebih banyak waktu untuk pelatihan karena kompleksitas model, dan kurang dapat diinterpretasikan dibandingkan dengan decision tree tunggal.
+- Decision Tree Classifier merupakan struktur pohon yang terdiri dari node-node yang merepresentasikan keputusan dan cabang-cabang yang merepresentasikan konsekuensi dari keputusan tersebut. Setiap node dalam decision tree merepresentasikan variabel dalam dataset yang mempengaruhi keputusan dan konsekuensi tersebut. Kelebihan dari algoritma ini adalah Mudah dipahami dan dapat menangani data kategorikal serta numerik. Memungkinkan interpretasi visual. Pada project ini parameter yang digunakan adalah sebagai berikut : 
+	> DecisionTreeClassifier(random_state=42)
+
+	![image](https://images.datacamp.com/image/upload/v1677504957/decision_tree_for_heart_attack_prevention_2140bd762d.png)
+  
+	Decision tree menjadi salah satu model machine learning yang paling populer dan paling sering digunakan dalam problem klasifikasi dan regresi. Digunakan untuk memecah data menjadi subset-subset yang semakin kecil dan homogen hingga didapatkan suatu hasil atau keputusan. 
+
+- Random Forest Classification adalah model ensemble yang terdiri dari banyak decision tree yang bekerja bersama untuk meningkatkan kinerja dan akurasi prediksi. Model ini mengurangi overfitting dibandingkan dengan decision tree tunggal dan dapat menangani dataset besar dengan banyak fitur. Namun, Random Forest memerlukan lebih banyak waktu untuk pelatihan karena kompleksitas model, dan kurang dapat diinterpretasikan dibandingkan dengan decision tree tunggal. Kelebihan dari algoritma ini adalah dapat mengatasi masalah overfitting yang umum terjadi pada decision tree. Mampu menangani dataset yang besar dengan banyak fitur. Berikut adalah parameter yang digunakan pada project ini : 
+	> RandomForestClassifier(n_estimators=100)
+	
+	![image](https://blog.myskill.id/wp-content/uploads/2023/10/972e598f-8afe-4e6a-91d6-4799fba0a55f_2224x1053.png)
+
+
+## Daftar Pustaka
+
 
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://syarifulmsth.github.io) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/syariful-musthofa/) [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
