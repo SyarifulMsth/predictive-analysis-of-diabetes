@@ -19,10 +19,8 @@ Diabetes yang tidak terkendali serta tidak diobati dengan benar akan menjadi kro
 
 Berdasarkan urian latar belakang permasalahan yang telah dijabarkan, pada proyek ini dibuat untuk membantu mengidentifikasi individu yang berisiko tinggi menderita diabaetes. Pada proyek ini dilakukan penerapan analisis prediktif (*predictive analytics*) dengan menganalisis berbagai faktor risiko yang menjadi faktor terjadinya diabetes melitus. Sehingga diharapkan dengan adanya proyek ini dapat membantu memberikan informasi dalam pencegahan diabetes di Indonesia. 
 
-**Daftar referensi**
-
-You can check the references for this project at the end of this documentation, thanks!
-
+**Daftar referensi**<br>
+*You can check the references of this project at the end of this documentation, thanks!*
 
 [^1]: Y. Yusransyah, S. N. Stiani, and A. N. Sabilla, “Hubungan Antara Kepatuhan Minum Obat Pasien Diabetes Mellitus dan Support yang Diberikan Keluarga,” _J. Ilm. Kesehat. Delima_, vol. 4, no. 2, pp. 74–77, 2022, doi: 10.60010/jikd.v4i2.79
 
@@ -51,20 +49,18 @@ Berdasarkan rumusan masalah (*problems statement*) yang telah dirumuskan sebelum
 
 ### Solution Statements
 Berdasarkan *problem statements* dan *goals* yang telah disebutkan sebelumnya, maka berikut adalah *solution statements* pada proyek machine learning ini : 
-1.   Melakukan proses pengembangan model machine learning dari awal hingga selesai, meliputi data wrangling, Exploratory Data  Analysis (EDA), modelling, dan evaluation.
-2. Pengembangan model machine learning (*modelling*) menggunakan algoritma yang sesuai dengan permasalahan, yaitu algoritma klasifikasi untuk memprediksi kelas (diabetes / non-diabetes) dengan menggunakan dataset yang telah ditentukan. Algoritma machine learning yang digunakan pada proyek ini diantaranya yaitu : 
-	- Logistic Regression : 
-	- K-Nearest Neighbors (KNN) : 
-	- Decision Tree Classifier : 
-	- Random Forest Classification : 
-3. Melakukan evaluation model untuk mengetahui performa model dengan menggunakan metriks evaluasi yang sudah ditentukan. Evaluation model dilakukan untuk mengetahui performa dari model yang telah dikembangkan dalam memprediksi penyakit diabetes. Sehingga dapat diketahui model machine learning yang terbaik untuk digunakan dalam memprediksi penyakit diabetes.
+1.   Melakukan proses pengembangan model *machine learning* dari awal hingga selesai, meliputi *data wrangling*, *Exploratory Data  Analysis* (EDA), *modelling*, dan *evaluation*.
+2. Pengembangan model *machine learning* (*modelling*) menggunakan algoritma yang sesuai dengan permasalahan, yaitu algoritma klasifikasi untuk memprediksi kelas (diabetes / non-diabetes) dengan menggunakan dataset yang telah ditentukan. Algoritma machine learning yang digunakan pada proyek ini diantaranya yaitu : 
+	- *Random Forest Classification* : algoritma ensemble (group) learning, yang terdiri dari banyak pohon keputusan (decision tree) yang bekerja bersama untuk meningkatkan kinerja dan akurasi prediksi.
+	- *Hyperparameter Tuning* dengan *Search Grid* : untuk memperoleh konfigurasi yang paling optimal untuk melatih model machine learning. 
+3. Melakukan *evaluation model* untuk mengetahui performa model dengan menggunakan metriks evaluasi yang sudah ditentukan. *Evaluation* model dilakukan untuk mengetahui performa dari model yang telah dikembangkan dalam memprediksi penyakit diabetes. Sehingga dapat diketahui model *machine learning* yang terbaik untuk digunakan dalam memprediksi penyakit diabetes.
  
 
 ## 📚 Data Understanding 
-Dataset yang digunakan pada project machine learning ini adalah [Diabetes dataset]() yang bersumber dari Kaggle. Dataset tersebut berformat csv (comma-separated values) dengan ukuran 23.3 kB. Dataset tersebut terdiri dari 768 data records dengan 9 feature column.
+Dataset yang digunakan pada proyek *machine learning* ini adalah [Diabetes dataset]() yang bersumber dari Kaggle. Dataset tersebut berformat csv (comma-separated values) dengan ukuran 23.3 kB. Dataset tersebut terdiri dari 768 *data records* dengan 9 *feature column*.
 
 ### Variabel Dataset
-Berikut adalah detail dari features dataset yang digunakan dalam pengembangan model machine learning proyek ini : 
+Berikut adalah detail dari *features* dataset yang digunakan dalam pengembangan model *machine learning* proyek ini : 
 
 | Feature                  | Description                                                          |
 |--------------------------|----------------------------------------------------------------------|
@@ -80,115 +76,150 @@ Berikut adalah detail dari features dataset yang digunakan dalam pengembangan mo
 
 ### Visualization & Analysis 
 - **Univariate Analysis**
-	<img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/univariate.png?raw=true" alt="Diabetes" width="500"> 
-	Berdasarkan visualisasi grafik pie-chart di atas menunjukkan bahwa jumlah penderita penyakit diabetes yaitu 268 orang (34,9 %). Sedangkan jumlah orang yang non-diabetes yaitu  500 orang (65,1%) dari total keseluruhan jumlah orang dalam dataset (768 orang). 
-	
-	<img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/univarite%20numerik.png?raw=true" alt="Diabetes" width="500">
-	Berdasarkan visualisasi untuk feature numerik pada dataset yang dapat dilihat pada histogram di atas, dapat diketahui beberapa informasi, yaitu : sebagaian besar orang memiliki glukosa dengan tingkat 100-150; sebagian besar orang memiliki BloodPressure pada tingkat 60-90; sebagian besar orang memiliki BMI berkisar dari 25-40; sebagian besar orang memiliki DiabetesPedigreeFunction berkisar dari 0.0 hingga 0.75; dan sebagian besar orang berumur 20-30 tahun. 
+<p align='center'><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/univariate.png?raw=true"  width="300"></p>
+<p align='center'>Gambar 1. Pie-Chart Diabetes & Non-Diabetes</p> 
+Berdasarkan visualisasi grafik *pie-chart* pada gambar 1 di atas menunjukkan bahwa jumlah penderita penyakit diabetes yaitu 268 orang (34,9 %). Sedangkan jumlah orang yang non-diabetes yaitu  500 orang (65,1%) dari total keseluruhan jumlah orang dalam dataset (768 orang).
+ 
+<p align='center'><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/univarite%20numerik.png?raw=true"  width="400"></p>
+<p align='center'>Gambar 2. Visualisasi feature numerik</p>
+<br>
+Berdasarkan visualisasi untuk *feature* numerik pada dataset yang dapat dilihat pada histogram di atas, dapat diketahui beberapa informasi, yaitu : sebagaian besar orang memiliki glukosa dengan tingkat 100-150; sebagian besar orang memiliki *BloodPressure* pada tingkat 60-90; sebagian besar orang memiliki BMI berkisar dari 25-40; sebagian besar orang memiliki *DiabetesPedigreeFunction* berkisar dari 0.0 hingga 0.75; dan sebagian besar orang berumur 20-30 tahun. <br><br>
 
-- **Multivariate Analysis**
-<img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/multivariate.png?raw=true" alt="Diabetes" width="500">
-Berdasarkan visualisasi di atas menunjukkan relasi antar feature pada dataset. Apabila diperhatikan korelasi antar feature pada dataset beragam, terdapat korelasi yang lemah (atau tidak ada korelasi sama sekali) dan beberapa feature yang berkorelasi meskipun tidak terlalu kuat. 
+- **Multivariate Analysis**<br>
+Berdasarkan visualisasi pada gambar 3 di bawah menunjukkan relasi antar feature pada dataset. Apabila diperhatikan korelasi antar feature pada dataset beragam, terdapat korelasi yang lemah (atau tidak ada korelasi sama sekali) dan beberapa feature yang berkorelasi meskipun tidak terlalu kuat. 
+<p align='center'>Gambar 3. Visualisasi multivariate analysis</p>
+<p align='center'><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/multivariate.png?raw=true"  width="400"></p>
 
 - **Outliers**
-<img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/outliersBefore.png?raw=true" alt="Diabetes" width="500"> Visualisasi boxplot di atas dilakukan untuk mengidentifikasi apakah terdapat pencilan (outliers) pada dataset yang digunakan pada proyek machine learning. Karena apabila terdapat outliers pada dataset dapat menyebabkan bias atau ketidakakuratan model dalam memprediksi. 
+Visualisasi boxplot di atas dilakukan untuk mengidentifikasi apakah terdapat pencilan (outliers) pada dataset yang digunakan pada proyek machine learning. Karena apabila terdapat outliers pada dataset dapat menyebabkan bias atau ketidakakuratan model dalam memprediksi. 
+
+<p align='center'>Gambar 4. Mengecek outliers</p>
+<p align='center'><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/outliersBefore.png?raw=true"  width="400"></p>
 
 
 ## 📚 Data Preparation
-Data preparation adalah proses mempersiapkan data mentah menjadi format yang sesuai untuk analisis atau pemrosesan lebih lanjut. Berikut adalah beberapa teknik atau metode yang digunakan dalam persiapan data pada proyek ini:
+*Data preparation* adalah proses mempersiapkan data mentah menjadi format yang sesuai untuk analisis atau pemrosesan lebih lanjut. Berikut adalah beberapa teknik atau metode yang digunakan dalam persiapan data pada proyek ini:
 
 1. **Handling missing value** 
-	- Missing value merupakan salah satu masalah yang paling sering dijumpai dalam proyek analisis data di industri. Masalah ini muncul karena adanya nilai yang hilang dari sebuah data dan biasanya direpresentasikan sebagai nilai NaN dalam library pandas. Hal ini biasanya terjadi karena adanya human error, masalah privasi, proses merging/join, dll. 
-	- Tujuan dari langkah ini adalah untuk memastikan keakuratan dan keandalan data yang digunakan untuk analisis atau pemodelan. Missing value dapat menyebabkan bias dan kesalahan dalam analisis data, sehingga penting untuk mengidentifikasi dan mengatasi nilai yang hilang ini agar hasil analisis menjadi lebih akurat dan dapat diandalkan.
-	- Terdapat beberapa cara atau metode yang dapat digunakan  untuk menangani missing value, yaitu Dropping, Imputation, Interpolation, dan lainnya. 
+	- *Missing value* merupakan salah satu masalah yang paling sering dijumpai dalam proyek analisis data di industri. Masalah ini muncul karena adanya nilai yang hilang dari sebuah data dan biasanya direpresentasikan sebagai nilai NaN dalam library pandas. Hal ini biasanya terjadi karena adanya *human error*, masalah privasi, proses *merging/join*, dll. 
+	- Tujuan dari langkah ini adalah untuk memastikan keakuratan dan keandalan data yang digunakan untuk analisis atau pemodelan. *Missing value* dapat menyebabkan bias dan kesalahan dalam analisis data, sehingga penting untuk mengidentifikasi dan mengatasi nilai yang hilang ini agar hasil analisis menjadi lebih akurat dan dapat diandalkan.
+	- Terdapat beberapa cara atau metode yang dapat digunakan  untuk menangani *missing value*, yaitu *Dropping*, *Imputation*, *Interpolation*, dan lainnya. 
 		
 2. **Handling duplicated data**
-	- Duplicated data adalah masalah lain yang umum dijumpai di industri. Ia terjadi ketika terdapat sebuah observasi (semua nilai dalam satu unit baris) yang memiliki nilai yang sama persis pada setiap kolomnya. 
-	-  Tujuan dari langkah ini adalah untuk memastikan integritas data. Duplicated data dapat mempengaruhi analisis data dan membuat hasil yang tidak akurat. Oleh karena itu, dengan mengidentifikasi dan menghapus data yang terduplikat, kita dapat memastikan bahwa data yang digunakan untuk analisis atau pemodelan adalah data yang valid dan representatif.
-	-  Salah satu teknik yang dapat digunakan dalam mengatasi duplicated data adalah dengan menghapus data yang terduplikat (dropping).
+	- *Duplicated data* adalah masalah lain yang umum dijumpai di industri. Ia terjadi ketika terdapat sebuah observasi (semua nilai dalam satu unit baris) yang memiliki nilai yang sama persis pada setiap kolomnya. 
+	-  Tujuan dari langkah ini adalah untuk memastikan integritas data. *Duplicated data* dapat mempengaruhi analisis data dan membuat hasil yang tidak akurat. Oleh karena itu, dengan mengidentifikasi dan menghapus data yang terduplikat, kita dapat memastikan bahwa data yang digunakan untuk analisis atau pemodelan adalah data yang valid dan representatif.
+	-  Salah satu teknik yang dapat digunakan dalam mengatasi *duplicated data* adalah dengan menghapus data yang terduplikat (*dropping*).
 
 3. **Handling outliers**
-	- Outliers adalah nilai yang jauh berbeda dari nilai lainnya dalam kumpulan data. Nilai ini muncul sebagai pengecualian dalam pola data yang ada. Nilai yang ada di outlier bisa jauh lebih tinggi maupun lebih rendah dibandingkan dengan nilai-nilai lain dalam dataset. Outlier bisa terjadi karena berbagai alasan, termasuk kesalahan pengukuran, kejadian langka, atau karena faktor lain yang tidak terduga. 
-	- Tujuan dari langkah ini  adalah untuk memastikan bahwa outlier tidak mempengaruhi analisis statistik yang dilakukan atau model machine learning yang dibangun. Outliers memiliki potensi untuk memberikan informasi yang salah atau mengganggu hasil analisis, sehingga penting untuk mengatasi mereka agar hasil analisis menjadi lebih akurat dan dapat dipercaya.
-	- Terdapat beberapa cara atau langkah yang dapat diterapkan dalam menangani outliers, yaitu meliputi identifikasi outliers, transformasi data, menghapus outliers, dan imputation. Pada proyek ini penanganan outliers dilakukan dengan menggunakan metode imputation, dengan menggunakan IQR method. Berikut adalah hasil dari metode imputation pada proyek ini :	
+	- *Outliers* adalah nilai yang jauh berbeda dari nilai lainnya dalam kumpulan data. Nilai ini muncul sebagai pengecualian dalam pola data yang ada. Nilai yang ada di *outlier* bisa jauh lebih tinggi maupun lebih rendah dibandingkan dengan nilai-nilai lain dalam dataset. Outlier bisa terjadi karena berbagai alasan, termasuk kesalahan pengukuran, kejadian langka, atau karena faktor lain yang tidak terduga. 
+	- Tujuan dari langkah ini  adalah untuk memastikan bahwa *outlier* tidak mempengaruhi analisis statistik yang dilakukan atau model machine learning yang dibangun. Outliers memiliki potensi untuk memberikan informasi yang salah atau mengganggu hasil analisis, sehingga penting untuk mengatasi mereka agar hasil analisis menjadi lebih akurat dan dapat dipercaya.
+	- Terdapat beberapa cara atau langkah yang dapat diterapkan dalam menangani outliers, yaitu meliputi identifikasi *outliers*, transformasi data, menghapus *outliers*, dan *imputation*. Pada proyek ini penanganan *outliers* dilakukan dengan menggunakan metode *imputation*, dengan menggunakan *IQR method*. Hasil dari metode *imputation* pada proyek ini  dapat dilihat pada gambar 5 berikut : 
 
-		<img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/outliersAfter.png?raw=true" alt="Diabetes" width="500">
+<p align='center'>Gambar 5. Handling outliers</p> 
+<p align='center'><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/outliersAfter.png?raw=true"  width="400"></p>
 		
 
 4. **Standardization**
-	- Standardisasi adalah proses mengubah data sehingga memiliki rata-rata (mean) nol dan varians (variance) satu. 
+	- Standardisasi adalah proses mengubah data sehingga memiliki rata-rata (*mean*) nol dan varians (*variance*) satu. 
 	-  Tujuan dari standardisasi adalah untuk membuat distribusi data lebih terpusat di sekitar nilai nol dengan variabilitas yang seragam, yang dapat membantu algoritma machine learning memahami dan memproses data dengan lebih baik.
-	-  Teknik yang digunakan adalah dengan mengurangi nilai setiap fitur dengan rerata dari fitur tersebut, dan kemudian membaginya dengan standar deviasi dari fitur tersebut. Dalam kasus ini, StandardScaler scikit-learn digunakan untuk menstandarisasi skor z.
+	-  Teknik yang digunakan adalah dengan mengurangi nilai setiap fitur dengan rerata dari fitur tersebut, dan kemudian membaginya dengan standar deviasi dari fitur tersebut. Dalam kasus ini, *StandardScaler scikit-learn* digunakan untuk menstandarisasi *skor z*.
 
 5. **Handling imbalanced data**
-	- Imbalanced data merupakan sebuah kondisi di mana distribusi dari kelas yang terdapat pada dataset tidak seimbang jumlahnya. 
+	- *Imbalanced data* merupakan sebuah kondisi di mana distribusi dari kelas yang terdapat pada dataset tidak seimbang jumlahnya. 
 	- Tujuan dari menangani imbalanced data adalah untuk meningkatkan performa model dalam memprediksi kelas minoritas.
-	- Terdapat beberapa cara atau metode yang dapat digunakan untuk menangani imbalanced data. Pertama, oversampling yaitu memperbanyak sampel dari kelas minoritas sehingga jumlahnya seimbang dengan kelas mayoritas. Ini dapat dilakukan dengan menggandakan sampel yang ada atau dengan membuat sampel sintetis baru. Cara lainnya, undersampling yaitu mengurangi jumlah sampel dari kelas mayoritas sehingga jumlahnya seimbang dengan kelas minoritas. Ini dapat dilakukan dengan menghapus sebagian sampel dari kelas mayoritas. Pada proyek ini penanganan imbalanced data dilakukan dengan metode SMOTE (Synthetic Minority Over-sampling Technique): SMOTE digunakan untuk membuat sampel sintetis dari kelas minoritas (dalam hal ini, kelas "1" dari kolom 'Outcome') sehingga jumlahnya seimbang dengan kelas mayoritas. Hal ini membantu mencegah bias pada model machine learning ke kelas mayoritas dan meningkatkan kinerja model untuk kelas minoritas.  <img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/imbalancedData.png?raw=true" alt="Diabetes" width="500">
+	- Terdapat beberapa cara atau metode yang dapat digunakan untuk menangani *imbalanced data*. Pertama, *oversampling* yaitu memperbanyak sampel dari kelas minoritas sehingga jumlahnya seimbang dengan kelas mayoritas. Ini dapat dilakukan dengan menggandakan sampel yang ada atau dengan membuat sampel sintetis baru. Cara lainnya, *undersampling* yaitu mengurangi jumlah sampel dari kelas mayoritas sehingga jumlahnya seimbang dengan kelas minoritas. Ini dapat dilakukan dengan menghapus sebagian sampel dari kelas mayoritas. Pada proyek ini penanganan *imbalanced data* dilakukan dengan metode *SMOTE* (*Synthetic Minority Over-sampling Technique*): *SMOTE* digunakan untuk membuat sampel sintetis dari kelas minoritas (dalam hal ini, kelas "1" dari kolom '*Outcome*') sehingga jumlahnya seimbang dengan kelas mayoritas. Hal ini membantu mencegah bias pada model machine learning ke kelas mayoritas dan meningkatkan kinerja model untuk kelas minoritas.  
+
+<p align='center'>Gambar 6. Imbalanced data</p>
+<p align='center'><img src ="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/imbalancedData.png?raw=true"  width="400"></p>
 	
 
 6. **Data Splitting**
-	- Data Splitting  adalah proses membagi dataset menjadi dua atau lebih bagian yang berbeda untuk digunakan dalam tahapan tertentu dari proses analisis data, seperti pelatihan model, validasi model, dan pengujian model.	
+	- Data Splitting  adalah proses membagi *dataset* menjadi dua atau lebih bagian yang berbeda untuk digunakan dalam tahapan tertentu dari proses analisis data, seperti pelatihan model, validasi model, dan pengujian model.	
 	- Tujuan dari langkah ini adalah pembagian data menjadi menjadi dua bagian: satu untuk melatih model (set pelatihan) dan yang lainnya untuk menguji model (set pengujian).
-	-  Teknik yang digunakan adalah dengan menggunakan metode Train-test split.
+	-  Teknik yang digunakan adalah dengan menggunakan metode *Train-test split*.
 
 
 ## 🎯 Modeling
-Pada proyek ini algoritma machine learning yang digunakan di antaranya yaitu Logistic Regression, K-Nearest Neighbors (KNN), Decision Tree Classifier, dan Random forest classification.
+Pada proyek ini algoritma machine learning yang digunakan di antaranya yaitu *`Random forest classification`* dan *`Hyperparameter Tuning Grid Search`.*
 
-- Logistic Regression adalah model statistik yang menggunakan fungsi logistik, atau fungsi logit, dalam matematika sebagai kesetaraan antara x dan y. Fungsi logit memetakan y sebagai fungsi sigmoid dari x. Keunggulan model ini adalah mudah dipahami dan diimplementasikan. Algoritma ini cocok untuk digunakan pada pemodelan data biner (dua kelas). Proses modelling Logistic Regression pada proyek ini akan menggunakan modul yang telah disediakan oleh scikit-learn yaitu LogisticRegression() dengan parameter max_iter=1000. 
-
-- K-Nearest Neighbors (KNN) adalah algoritma yang relatif sederhana dibandingkan dengan algoritma lainnya. Algoritma KNN menggunakan 'kesamaan fitur' untuk memprediksi nilai dari setiap data baru. Dengan kata lain, setiap data baru diberi nilai berdasarkan seberapa miripnya titik-titik dalam set pelatihan. <br><br>KNN bekerja dengan membandingkan jarak satu sampel dengan sampel pelatihan lainnya dengan memilih k tetangga terdekat (di mana k adalah bilangan positif). Nah, itulah mengapa algoritma ini disebut K-nearest neighbors (sejumlah k tetangga terdekat). KNN dapat digunakan untuk kasus klasifikasi dan regresi. Keuntungan dari algoritma ini adalah sederhana dan intuitif. Cocok untuk dataset yang tidak terlalu besar dan tidak memiliki struktur yang kompleks. <br><br>Dalam proyek ini, parameter yang digunakan adalah sebagai berikut:
-
-  
-
-> KNeighborsClassifier(n_neighbors=11, p=2, metric='euclidean')
+### Random Forest Classification
+*Random Forest Classification* termasuk algoritma *supervised learning* yang dapat digunakan untuk permasalahan *classification*. *Random forest* termasuk dalam salah satu kategori *ensemble* (group) *learning*, yang terdiri dari banyak pohon keputusan (*decision* *tree*) yang bekerja bersama untuk meningkatkan kinerja dan akurasi prediksi. Pada model *machine learning ensemble*, setiap model harus membuat prediksi secara independen. Kemudian, prediksi dari setiap *model ensemble* ini digabungkan untuk membuat prediksi akhir. *Algoritma Random Forest* mengkombinasikan hasil prediksi dari berbagai *model decision tree* yang dibuat secara acak. 
+<p align='center'><img src="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/random%20forest.png?raw=true"  width="500"></p>
 
   
+**Kelebihan** : 
+- *Random forest* merupakan algoritma yang sering digunakan karena cukup sederhana tetapi memiliki stabilitas yang mumpuni.
+- Random forest dapat mencegah terjadinya *overfitting* apabila dibandingkan dengan *algoritma Decision Tree*. Selain itu, algoritma ini dapat menangani dataset besar dengan banyak fitur. 
 
-![image](https://miro.medium.com/v2/resize:fit:640/format:webp/0*2_qzcm2gSe9l67aI.png)
+**Kekurangan** : 
+- *Random Forest* memerlukan waktu pelatihan yang lebih lama dibanding *Decision Tree* karena kompleksitas modelnya
 
-  
+### Implementasi  
+Proses modelling menggunakan algoritma *Random Forest* pada proyek ini (permasalahan klasifikasi) menggunakan *`RandomForestClassifier()`* yang telah disediakan oleh *scikit learn*. Pada proyek ini parameter yang digunakan yaitu *`n_estimators=50`*, *`max_depth=5`*, dan *`max_features='auto`*. *`n_estimators`* adalah *hyperparameter* yang menentukan jumlah pohon (*trees*) yang digunakan dalam *random forest*, pada proyek ini *`n_estimators`* yang digunakan yaitu 50. Parameter selanjutnya adalah *`max_depth`*, yang merupakan kedalaman atau panjang pohon. Parameter ini merupakan ukuran seberapa banyak pohon dapat membelah (*splitting*) untuk membagi setiap node ke dalam jumlah pengamatan yang diinginkan. Pada proyeki ini *`max_depth`* yang digunakan adalah 5. Parameter selanjutnya adalah *`max_features`*, yaitu *hyperparameter* yang mengatur jumlah maksimum *feature* yang digunakan untuk mencari percabangan terbaik. Pada proyek ini, *`max_features`* yang digunakan adalah auto.
 
-- Decision Tree Classifier adalah struktur pohon yang terdiri dari node yang mewakili keputusan dan cabang yang mewakili konsekuensi dari keputusan tersebut. Setiap node dalam pohon keputusan mewakili variabel dalam dataset yang mempengaruhi keputusan dan konsekuensinya. Decision tree adalah salah satu model machine learning yang paling populer dan paling sering digunakan dalam masalah klasifikasi dan regresi. Digunakan untuk membagi data menjadi subset yang lebih kecil dan lebih homogen hingga didapatkan hasil atau keputusan. Kelebihan dari algoritma ini adalah mudah dipahami dan dapat menangani data kategori dan numerik. <br><br> Dalam proyek ini, parameter yang digunakan adalah sebagai berikut:
+###  Hyperparameter Tuning
+*Hyperparameters* digunakan untuk meng-*custom* model dan mengontrol proses *training* sesuai dengan *dataset* atau permasalahan yang ingin diselesaikan. Sementara *hyperparameter* *tuning* dilakukan dengan tujuan untuk memperoleh konfigurasi yang paling optimal untuk melatih model *machine* *learning*. Pada praktiknya, proses *hyperparameter* *tuning* ini dapat dijalankan secara manual dengan mencoba berbagai konfigurasi *hyperparameter* yang ada hingga diperoleh konfigurasi yang paling optimal. Cara lainnya yaitu dengan melakukan *hyperparameter tuning* secara otomatis dengan bantuan beberapa algoritma salah satunya adalah *grid search*. 
 
-  
+*Grid search* merupakan algoritma yang memungkinkan kita untuk melakukan proses *hyperparameter tuning* secara otomatis. Pada prosesnya, algoritma ini akan membuat sebuah *_n-dimensional search space_* yang terbentuk dari n *hyperparameter* dari sebuah model. Setiap titik yang terdapat pada *search space* mewakili satu konfigurasi atau perpaduan dari n *hyperparameter*. Algoritma ini bekerja dengan mengevaluasi setiap titik yang terdapat dalam search space untuk memperoleh konfigurasi *hyperparameter* yang paling optimal.
 
-> DecisionTreeClassifier(random_state=42)
+Pada proyek ini akan dilakukan *Hyperparameter Tuning* dengan *Grid Search* untuk meningkatkan performa dari model *Random Forest* yang telah dikembangkan sebelumnya. 
 
-  
+Berikut adalah penerapan *Hyperparameter Tuning* pada proyek ini : 
+```python
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import GridSearchCV
 
-![image](https://images.datacamp.com/image/upload/v1677504957/decision_tree_for_heart_attack_prevention_2140bd762d.png)
+rdf_model = RandomForestClassifier(random_state=123)
 
-  
+param_grid = { 
+	'n_estimators': [50, 100, 200, 300],    
+	'max_features': ['auto', 'sqrt', 'log2'],
+    'max_depth' : [5, 6, 7, 8],
+    'criterion' :['gini', 'entropy']
+}
 
-- Random Forest Classification adalah model ensemble yang terdiri dari banyak pohon keputusan yang bekerja bersama untuk meningkatkan kinerja dan akurasi prediksi. Model ini mengurangi overfitting dibandingkan dengan satu pohon keputusan tunggal dan dapat menangani dataset besar dengan banyak fitur. Namun, Random Forest memerlukan waktu yang lebih lama untuk dilatih karena kompleksitas modelnya, dan kurang dapat diinterpretasikan dibandingkan dengan satu pohon keputusan tunggal. Keuntungan dari algoritma ini adalah dapat mengatasi masalah overfitting yang umum terjadi dalam pohon keputusan. Dapat menangani dataset besar dengan banyak fitur. <br><br>Berikut adalah parameter yang digunakan dalam proyek ini:
-
-  
-
-> RandomForestClassifier(n_estimators=100)
-
-  
-
-![image](https://blog.myskill.id/wp-content/uploads/2023/10/972e598f-8afe-4e6a-91d6-4799fba0a55f_2224x1053.png)
-
-  
+CV_rdf = GridSearchCV(estimator=rdf_model, param_grid=param_grid, cv=5, n_jobs=-1)
+CV_rdf.fit(train_pca_df, new_y_train)
+```
+Parameter yang digunakan pada *Hyperparamter Tuning* di atas adalah sebagai berikut : 
+-   *random_state*: digunakan untuk mengontrol *random number generator* yang digunakan oleh model.
+-   *max_depth*: *hyperparameter* yang mengatur kedalaman atau panjang pohon keputusan.
+-   *max_features*:  *hyperparameter* yang mengatur jumlah *maksimum feature* yang digunakan untuk mencari percabangan terbaik.
+-   *criterion*: metrik yang digunakan untuk mengukur kualitas dari sebuah percabangan.
+-   *n_estimators*:  *hyperparameter* yang menentukan jumlah *trees* (pohon) yang digunakan dalam algoritma *random forest*.
+ 
+ Berdasarkan *Hyperparameters Tuning* dengan *Grid Search* di atas, diperoleh parameter terbaik yang dapat digunakan pada model *Random Forest* dalam proyek ini. Paramter yang digunakan di antaranya sebagai berikut : 
+```
+random_forest_model_tuning = RandomForestClassifier(
+	random_state=123,
+	max_depth=80,
+	n_estimators=50,
+	max_features='auto',
+	criterion='gini',
+	n_jobs=-1)
+```
+### Pemilihan model : 
+Berdasarkan eksperimen yang telah dilakukan pada tahapan pengembangan model, diperoleh model machine learning terbaik yaitu *Random Forest Classification* dengan *Hyperparameter Tuning Grid Search*. Hal ini berdasarkan hasil dari *confussion matrix* dan *classification report* yang menunjukkan bahwa hasil dari model ini lebih baik dari hasil model *Random Forest Classification* yang tidak menerapkan *hyperparameter tuning*. Sehingga hasil dari model *machine learing* yang dikembangkan telah memenuhi tujuan dari *solution statements* yang telah ditentukan sebelumnya. 
+<p align='center'><img src="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/result.PNG?raw=true"  width="400"></p>
 
 ## 📈 Evaluation
-Pada proyek machine learning ini evaluasi model akan menggunakan confussion matrix. Confussion matrix memberi gambaran bagaimana performa model pada berbagai kelas. Ia menunjukkan berapa banyak jumlah prediksi yang benar (True) dan salah (False) untuk setiap label. 
+Pada proyek *machine learning* ini evaluasi model akan menggunakan *confussion matrix*. *Confussion matrix* memberi gambaran bagaimana performa model pada berbagai kelas. Ia menunjukkan berapa banyak jumlah prediksi yang benar (*True*) dan salah (*False*) untuk setiap label. 
 
-Berikut merupakan contoh ilustrasi confusion matrix untuk multiclass classification :
-
-![image](https://dicoding-web-img.sgp1.cdn.digitaloceanspaces.com/original/academy/dos:9932e2b5e76213afe1fdca85a2ce60d820230918222106.png)
-
-Dengan menggunakan confussion matrix, kita dapat mengetahui seberapa baik performa dari model machine learning yang dikembangkan. Hasil dari confussion matrix ini akan digunakan untuk menghitung berbagai metrik lainnya, seperti accuracy, precision, recall, dan F-1 score.
+Dengan menggunakan *confussion matrix*, kita dapat mengetahui seberapa baik performa dari model *machine learning* yang dikembangkan. Hasil dari *confussion matrix* ini akan digunakan untuk menghitung berbagai metrik lainnya, seperti *accuracy*, *precision*, *recall*, dan *F-1 score*.
 
 -  **Accuracy —** metrik evaluasi yang mengukur seberapa baik model membuat prediksi yang benar dari total prediksi yang dilakukan.
 - **Precision —** metrik evaluasi yang digunakan untuk mengukur berapa banyak model menghasilkan prediksi yang benar untuk suatu kelas tertentu. Precision didefinisikan sebagai perbandingan antara jumlah hasil prediksi yang benar untuk kelas tertentu dengan jumlah total prediksi untuk kelas tersebut.
 - **Recall —** metrik yang digunakan untuk mengukur seberapa baik model dalam memprediksi suatu kelas tertentu. Recall didefinisikan sebagai perbandingan antara jumlah hasil prediksi yang benar untuk kelas tertentu dengan jumlah total sampel pada kelas tersebut.
-- **F1-score —** merupakan kombinasi antara nilai precision dan recall dari suatu kelas tertentu.
+- **F1-score —** merupakan kombinasi antara nilai *precision* dan *recall* dari suatu kelas tertentu.
+
+Berdasarkan dengan konteks data, *problem statement*, dan solusi yang diimplementasikan, metrik evaluasi yang akan digunakan pada proyek machine learning ini adalah *Recall*. *Recall* adalah metrik yang digunakan untuk mengukur seberapa baik model dalam memprediksi suatu kelas tertentu. *Recall* dipilih dengan alasan bahwa algoritma *machine learning* / model memprediksi seseorang mengalami diabetes tetapi sebenarnya non-diabetes, daripada model salah memprediksi bahwa seseorang non-diabetes padahal sebenarnya dia adalah penderita diabetes. 
+
+<p align='center'><img src="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/recall.PNG?raw=true"  width="400"></p>
+
+Pada proyek machine learning ini, model terbaik yang dikembangkan adalah model **Random Forest Classification** dengan **Hyperparameter Tuning Grid Search**, dengan *Recall* yang diperoleh yaitu 0.96 ( train dataset) dan 0.84 (test dataset).
 
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://syarifulmsth.github.io) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/syariful-musthofa/) [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
 
 ## Feedback
-If you have any feedback, please reach out at syarifulm007@gmail.com
+*If you have any feedback, please reach out at* syarifulm007@gmail.com
