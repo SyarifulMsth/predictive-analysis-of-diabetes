@@ -7,30 +7,27 @@ Domain yang akan dibahas pada project machine learning (_predictive analytics_) 
 
 ### Latar Belakang
 
-Perubahan gaya hidup dan sosial ekonomi akibat urbanisasi dan modernisasi terutama di masyarakat kota-kota besar di Indonesia menjadi penyebab terjadinya peningkatan prevalensi penyakit degeneratif. Beberapa jenis penyakit yang masuk dalam kelompok penyakit degeneratif seperti Diabetes Mellitus (DM), jantung koroner, hipertensi, hiperlipidemia dan sebagainya.[^4]
+Perubahan gaya hidup dan sosial ekonomi akibat urbanisasi dan modernisasi terutama di masyarakat kota-kota besar di Indonesia menjadi penyebab terjadinya peningkatan prevalensi penyakit degeneratif. Beberapa jenis penyakit yang masuk dalam kelompok penyakit degeneratif seperti Diabetes Mellitus (DM), jantung koroner, hipertensi, hiperlipidemia dan sebagainya.<sup>[4]</sup>
 
-Diabetes Melitus atau sering juga disebut sebagai penyakit kencing manis merupakan penyakit menahun yang dapat diderita oleh seseorang selama seumur hidup. [^3] Diabetes dibagi menjadi 2 tipe, yaitu diabetes melitus tipe 1 dan diabetes melitus tipe 2. Diabetes melitus tipe 1 merupakan diabetes yang ditunjukkan dengan insulin yang dihasilkan oleh tubuh sedikit (dibawah kondisi normal) atau bahkan tidak menghasilkan insulin sama sekali.[^2] Hal tersebut dikarenakan sel penghasil insulin telah hancur oleh sistem kekebalan tubuh dan diabetes tipe 1 termasuk pada penyakit autoimun (kondisi ketika sistem kekebalan tubuh seseorang menyerang tubuhnya sendiri). Sedangkan pada diabetes melitus tipe 2, tubuh dapat menghasilkan insulin yang cukup pada awal penyakit, namun tidak meresponnya secara efektif. Sehingga pankreas secara bertahap kehilangan kemampuan untuk memproduksi insulin yang cukup.  
+Diabetes Melitus atau sering juga disebut sebagai penyakit kencing manis merupakan penyakit menahun yang dapat diderita oleh seseorang selama seumur hidup.<sup>[3]</sup> Diabetes dibagi menjadi 2 tipe, yaitu diabetes melitus tipe 1 dan diabetes melitus tipe 2. Diabetes melitus tipe 1 merupakan diabetes yang ditunjukkan dengan insulin yang dihasilkan oleh tubuh sedikit (dibawah kondisi normal) atau bahkan tidak menghasilkan insulin sama sekali.<sup>[2]</sup> Hal tersebut dikarenakan sel penghasil insulin telah hancur oleh sistem kekebalan tubuh dan diabetes tipe 1 termasuk pada penyakit autoimun (kondisi ketika sistem kekebalan tubuh seseorang menyerang tubuhnya sendiri). Sedangkan pada diabetes melitus tipe 2, tubuh dapat menghasilkan insulin yang cukup pada awal penyakit, namun tidak meresponnya secara efektif. Sehingga pankreas secara bertahap kehilangan kemampuan untuk memproduksi insulin yang cukup.  
 
 Penyakit diabetes berkaitan dengan berbagai faktor, seperti faktor keturunan, pola makan yang buruk, aktivitas fisik yang kurang, dan gaya hidup yang tidak baik (sehingga bisa memicu terjadinya kelebihan berat badan atau obesitas). 
 
-Diabetes Mellitus menjadi salah satu penyakit umum yang terjadi di berbagai negara, termasuk di Indonesia. Menurut International Diabetes Federation (IDF) status Indonesia terhadap penyakit Diabetes ini adalah waspada karena Indonesia menepati urutan **ke-7** dari **10** **negara dengan jumlah pasien Diabetes tertinggi**. Tercatat per tahun 2020 jumlah pasien Diabetes Mellitus di Indonesia mencapai 6,2 persen atau setara dengan 10,8 juta jiwa dan akan terus meningkat setiap tahunnya. Pola makan yang tidak teratur, diet ketat yang dijalani beberapa orang, serta mengkonsumsi makanan-makanan yang tidak sehat juga menjadi penyebab timbulnya penyakit Diabetes Mellitus ini. [^1]
+Diabetes Mellitus menjadi salah satu penyakit umum yang terjadi di berbagai negara, termasuk di Indonesia. Menurut International Diabetes Federation (IDF) status Indonesia terhadap penyakit Diabetes ini adalah waspada karena Indonesia menepati urutan **ke-7** dari **10** **negara dengan jumlah pasien Diabetes tertinggi**. Tercatat per tahun 2020 jumlah pasien Diabetes Mellitus di Indonesia mencapai 6,2 persen atau setara dengan 10,8 juta jiwa dan akan terus meningkat setiap tahunnya. Pola makan yang tidak teratur, diet ketat yang dijalani beberapa orang, serta mengkonsumsi makanan-makanan yang tidak sehat juga menjadi penyebab timbulnya penyakit Diabetes Mellitus ini.<sup>[1]</sup>
 
-Diabetes yang tidak terkendali serta tidak diobati dengan benar akan menjadi kronis dan berakibat pada munculnya komplikasi, seperti gagal ginjal, penyakit kardiovaskular, gangguan pada mata, dan juga saraf.[^1] Meskipun demikian, penyakit diabetes sebenarnya 80% masih dapat dicegah agar jumlah penderita penyakit ini semakit meningkat tiap tahunnya. Cara pencegahan yang dapat dilakukan yaitu dengan tidak melakukan hal-hal yang dapat meningkatkan risiko diabetes melitus sejak dini, sehingga tidak mempengaruhi tingkat kesehatan di masa tua nanti. Misalnya tidak mengkonsumsi fast food, makan makanan yang mengandung lemat tinggi, dan menerapkan pola hidup sehat seperti makan buah-buahan dan aktif berolahraga. [^3]
+Diabetes yang tidak terkendali serta tidak diobati dengan benar akan menjadi kronis dan berakibat pada munculnya komplikasi, seperti gagal ginjal, penyakit kardiovaskular, gangguan pada mata, dan juga saraf.<sup>[1]</sup> Meskipun demikian, penyakit diabetes sebenarnya 80% masih dapat dicegah agar jumlah penderita penyakit ini semakit meningkat tiap tahunnya. Cara pencegahan yang dapat dilakukan yaitu dengan tidak melakukan hal-hal yang dapat meningkatkan risiko diabetes melitus sejak dini, sehingga tidak mempengaruhi tingkat kesehatan di masa tua nanti. Misalnya tidak mengkonsumsi fast food, makan makanan yang mengandung lemat tinggi, dan menerapkan pola hidup sehat seperti makan buah-buahan dan aktif berolahraga.<sup>[3]</sup>
 
 Berdasarkan urian latar belakang permasalahan yang telah dijabarkan, pada proyek ini dibuat untuk membantu mengidentifikasi individu yang berisiko tinggi menderita diabaetes. Pada proyek ini dilakukan penerapan analisis prediktif (*predictive analytics*) dengan menganalisis berbagai faktor risiko yang menjadi faktor terjadinya diabetes melitus. Sehingga diharapkan dengan adanya proyek ini dapat membantu memberikan informasi dalam pencegahan diabetes di Indonesia. 
 
-**Daftar referensi**<br>
-*You can check the references of this project at the end of this documentation, thanks!*
+## References
 
-[^1]: Y. Yusransyah, S. N. Stiani, and A. N. Sabilla, “Hubungan Antara Kepatuhan Minum Obat Pasien Diabetes Mellitus dan Support yang Diberikan Keluarga,” _J. Ilm. Kesehat. Delima_, vol. 4, no. 2, pp. 74–77, 2022, doi: 10.60010/jikd.v4i2.79
+[1] Y. Yusransyah, S. N. Stiani, and A. N. Sabilla, “Hubungan Antara Kepatuhan Minum Obat Pasien Diabetes Mellitus dan Support yang Diberikan Keluarga,” *J. Ilm. Kesehat. Delima*, vol. 4, no. 2, pp. 74–77, 2022, doi: 10.60010/jikd.v4i2.79
 
-[^2]: F. Nuraisyah, “Faktor Risiko Diabetes Mellitus Tipe 2,” _J. Kebidanan dan Keperawatan Aisyiyah_, vol. 13, no. 2, pp. 120–127, 2018, doi: 10.31101/jkk.395
+[2] F. Nuraisyah, “Faktor Risiko Diabetes Mellitus Tipe 2,” *J. Kebidanan dan Keperawatan Aisyiyah*, vol. 13, no. 2, pp. 120–127, 2018, doi: 10.31101/jkk.395
 
-[^3]: Lestari, Zulkarnain, and S. A. Sijid, “Diabetes Melitus: Review Etiologi, Patofisiologi, Gejala, Penyebab, Cara Pemeriksaan, Cara Pengobatan dan Cara Pencegahan,” _UIN Alauddin Makassar_, no. November, pp. 237–241, 2021, [Online]. <br>Available: http://journal.uin-alauddin.ac.id/index.php/psb
+[3] Lestari, Zulkarnain, and S. A. Sijid, “Diabetes Melitus: Review Etiologi, Patofisiologi, Gejala, Penyebab, Cara Pemeriksaan, Cara Pengobatan dan Cara Pencegahan,” *UIN Alauddin Makassar*, no. November, pp. 237–241, 2021.
 
-[^4]: M. Rejeki, “Analisis Komparatif Penyembuhan Penyakit Diabetes Melitus dengan Kombinasi Penggunaan Obat Herbal dan Konsumsi Nutrisi yang Tepat,” _Proceeding of The URECOL_, pp. 353–360, 2019, [Online]. Available: http://repository.urecol.org/index.php/proceeding/article/view/630
-
-
+[4] M. Rejeki, “Analisis Komparatif Penyembuhan Penyakit Diabetes Melitus dengan Kombinasi Penggunaan Obat Herbal dan Konsumsi Nutrisi yang Tepat,” *Proceeding of The URECOL*, pp. 353–360, 2019.
 
 ## 📌 Business Understanding
 
@@ -162,42 +159,15 @@ Proses modelling menggunakan algoritma *Random Forest* pada proyek ini (permasal
 
 *Grid search* merupakan algoritma yang memungkinkan kita untuk melakukan proses *hyperparameter tuning* secara otomatis. Pada prosesnya, algoritma ini akan membuat sebuah *_n-dimensional search space_* yang terbentuk dari n *hyperparameter* dari sebuah model. Setiap titik yang terdapat pada *search space* mewakili satu konfigurasi atau perpaduan dari n *hyperparameter*. Algoritma ini bekerja dengan mengevaluasi setiap titik yang terdapat dalam search space untuk memperoleh konfigurasi *hyperparameter* yang paling optimal.
 
-Pada proyek ini akan dilakukan *Hyperparameter Tuning* dengan *Grid Search* untuk meningkatkan performa dari model *Random Forest* yang telah dikembangkan sebelumnya. 
-
-Berikut adalah penerapan *Hyperparameter Tuning* pada proyek ini : 
-```python
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import GridSearchCV
-
-rdf_model = RandomForestClassifier(random_state=123)
-
-param_grid = { 
-	'n_estimators': [50, 100, 200, 300],    
-	'max_features': ['auto', 'sqrt', 'log2'],
-    'max_depth' : [5, 6, 7, 8],
-    'criterion' :['gini', 'entropy']
-}
-
-CV_rdf = GridSearchCV(estimator=rdf_model, param_grid=param_grid, cv=5, n_jobs=-1)
-CV_rdf.fit(train_pca_df, new_y_train)
-```
-Parameter yang digunakan pada *Hyperparamter Tuning* di atas adalah sebagai berikut : 
+Pada proyek ini akan dilakukan *Hyperparameter Tuning* dengan *Grid Search* untuk meningkatkan performa dari model *Random Forest* yang telah dikembangkan sebelumnya. Parameter yang digunakan pada *Hyperparamter Tuning* adalah sebagai berikut : 
 -   *random_state*: digunakan untuk mengontrol *random number generator* yang digunakan oleh model.
 -   *max_depth*: *hyperparameter* yang mengatur kedalaman atau panjang pohon keputusan.
 -   *max_features*:  *hyperparameter* yang mengatur jumlah *maksimum feature* yang digunakan untuk mencari percabangan terbaik.
 -   *criterion*: metrik yang digunakan untuk mengukur kualitas dari sebuah percabangan.
 -   *n_estimators*:  *hyperparameter* yang menentukan jumlah *trees* (pohon) yang digunakan dalam algoritma *random forest*.
  
- Berdasarkan *Hyperparameters Tuning* dengan *Grid Search* di atas, diperoleh parameter terbaik yang dapat digunakan pada model *Random Forest* dalam proyek ini. Paramter yang digunakan di antaranya sebagai berikut : 
-```
-random_forest_model_tuning = RandomForestClassifier(
-	random_state=123,
-	max_depth=80,
-	n_estimators=50,
-	max_features='auto',
-	criterion='gini',
-	n_jobs=-1)
-```
+ Berdasarkan *Hyperparameters Tuning* dengan *Grid Search* yang telah dilakukan, maka dapat diketahui *best parameter* yang dapat digunakan pada model *Random Forest* untuk meningkatkan performa model. Paramter yang digunakan tersebut di antaranya `criterion : gini`; `max_depth : 8`; `max_features : auto`; dan `n_estimators : 50`. 
+ 
 ### Pemilihan model : 
 Berdasarkan eksperimen yang telah dilakukan pada tahapan pengembangan model, diperoleh model machine learning terbaik yaitu *Random Forest Classification* dengan *Hyperparameter Tuning Grid Search*. Hal ini berdasarkan hasil dari *confussion matrix* dan *classification report* yang menunjukkan bahwa hasil dari model ini lebih baik dari hasil model *Random Forest Classification* yang tidak menerapkan *hyperparameter tuning*. Sehingga hasil dari model *machine learing* yang dikembangkan telah memenuhi tujuan dari *solution statements* yang telah ditentukan sebelumnya. 
 <p align='center'><img src="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/result.PNG?raw=true"  width="400"></p>
@@ -214,7 +184,15 @@ Dengan menggunakan *confussion matrix*, kita dapat mengetahui seberapa baik perf
 
 Berdasarkan dengan konteks data, *problem statement*, dan solusi yang diimplementasikan, metrik evaluasi yang akan digunakan pada proyek machine learning ini adalah *Recall*. *Recall* adalah metrik yang digunakan untuk mengukur seberapa baik model dalam memprediksi suatu kelas tertentu. *Recall* dipilih dengan alasan bahwa algoritma *machine learning* / model memprediksi seseorang mengalami diabetes tetapi sebenarnya non-diabetes, daripada model salah memprediksi bahwa seseorang non-diabetes padahal sebenarnya dia adalah penderita diabetes. 
 
-<p align='center'><img src="https://github.com/SyarifulMsth/predictive-analytics-of-diabetes/blob/main/image/recall.PNG?raw=true"  width="400"></p>
+
+|            	| precision 	| recall 	| f1-score 	| support 	|
+|:----------:	|:---------:	|:------:	|:--------:	|:-------:	|
+|      0     	|    0.88   	|  0.79  	|   0.83   	|   133   	|
+|      1     	|    0.81   	|  0.89  	|   0.85   	|   131   	|
+|  accuracy  	|           	|        	|   0.84   	|   264   	|
+|  macro avg 	|    0.84   	|  0.84  	|   0.84   	|   264   	|
+| weight avg 	|    0.84   	|  0.84  	|   0.84   	|   264   	|
+
 
 Pada proyek machine learning ini, model terbaik yang dikembangkan adalah model **Random Forest Classification** dengan **Hyperparameter Tuning Grid Search**, dengan *Recall* yang diperoleh yaitu 0.96 ( train dataset) dan 0.84 (test dataset).
 
