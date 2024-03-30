@@ -19,16 +19,6 @@ Diabetes yang tidak terkendali serta tidak diobati dengan benar akan menjadi kro
 
 Berdasarkan urian latar belakang permasalahan yang telah dijabarkan, pada proyek ini dibuat untuk membantu mengidentifikasi individu yang berisiko tinggi menderita diabaetes. Pada proyek ini dilakukan penerapan analisis prediktif (*predictive analytics*) dengan menganalisis berbagai faktor risiko yang menjadi faktor terjadinya diabetes melitus. Sehingga diharapkan dengan adanya proyek ini dapat membantu memberikan informasi dalam pencegahan diabetes di Indonesia. 
 
-## References
-
-[1] Y. Yusransyah, S. N. Stiani, and A. N. Sabilla, “Hubungan Antara Kepatuhan Minum Obat Pasien Diabetes Mellitus dan Support yang Diberikan Keluarga,” *J. Ilm. Kesehat. Delima*, vol. 4, no. 2, pp. 74–77, 2022, doi: 10.60010/jikd.v4i2.79
-
-[2] F. Nuraisyah, “Faktor Risiko Diabetes Mellitus Tipe 2,” *J. Kebidanan dan Keperawatan Aisyiyah*, vol. 13, no. 2, pp. 120–127, 2018, doi: 10.31101/jkk.395
-
-[3] Lestari, Zulkarnain, and S. A. Sijid, “Diabetes Melitus: Review Etiologi, Patofisiologi, Gejala, Penyebab, Cara Pemeriksaan, Cara Pengobatan dan Cara Pencegahan,” *UIN Alauddin Makassar*, no. November, pp. 237–241, 2021.
-
-[4] M. Rejeki, “Analisis Komparatif Penyembuhan Penyakit Diabetes Melitus dengan Kombinasi Penggunaan Obat Herbal dan Konsumsi Nutrisi yang Tepat,” *Proceeding of The URECOL*, pp. 353–360, 2019.
-
 ## 📌 Business Understanding
 
 ### Problem Statement
@@ -104,7 +94,7 @@ Visualisasi boxplot di atas dilakukan untuk mengidentifikasi apakah terdapat pen
 		
 2. **Handling duplicated data**
 	- *Duplicated data* adalah masalah lain yang umum dijumpai di industri. Ia terjadi ketika terdapat sebuah observasi (semua nilai dalam satu unit baris) yang memiliki nilai yang sama persis pada setiap kolomnya. 
-	-  Tujuan dari langkah ini adalah untuk memastikan integritas data. *Duplicated data* dapat mempengaruhi analisis data dan membuat hasil yang tidak akurat. Oleh karena itu, dengan mengidentifikasi dan menghapus data yang terduplikat, kita dapat memastikan bahwa data yang digunakan untuk analisis atau pemodelan adalah data yang valid dan representatif.
+	-  Tujuan dari langkah ini adalah untuk memastikan integritas data. *Duplicated data* dapat mempengaruhi analisis data dan membuat hasil yang tidak akurat. Oleh karena itu, dengan mengidentifikasi dan menghapus data yang terduplikat, dapat memastikan bahwa data yang digunakan untuk analisis atau pemodelan adalah data yang valid dan representatif.
 	-  Salah satu teknik yang dapat digunakan dalam mengatasi *duplicated data* adalah dengan menghapus data yang terduplikat (*dropping*).
 
 3. **Handling outliers**
@@ -157,7 +147,7 @@ Proses modelling menggunakan algoritma *Random Forest* pada proyek ini (permasal
 ###  Hyperparameter Tuning
 *Hyperparameters* digunakan untuk meng-*custom* model dan mengontrol proses *training* sesuai dengan *dataset* atau permasalahan yang ingin diselesaikan. Sementara *hyperparameter* *tuning* dilakukan dengan tujuan untuk memperoleh konfigurasi yang paling optimal untuk melatih model *machine* *learning*. Pada praktiknya, proses *hyperparameter* *tuning* ini dapat dijalankan secara manual dengan mencoba berbagai konfigurasi *hyperparameter* yang ada hingga diperoleh konfigurasi yang paling optimal. Cara lainnya yaitu dengan melakukan *hyperparameter tuning* secara otomatis dengan bantuan beberapa algoritma salah satunya adalah *grid search*. 
 
-*Grid search* merupakan algoritma yang memungkinkan kita untuk melakukan proses *hyperparameter tuning* secara otomatis. Pada prosesnya, algoritma ini akan membuat sebuah *_n-dimensional search space_* yang terbentuk dari n *hyperparameter* dari sebuah model. Setiap titik yang terdapat pada *search space* mewakili satu konfigurasi atau perpaduan dari n *hyperparameter*. Algoritma ini bekerja dengan mengevaluasi setiap titik yang terdapat dalam search space untuk memperoleh konfigurasi *hyperparameter* yang paling optimal.
+*Grid search* merupakan algoritma yang dapat digunakan untuk melakukan proses *hyperparameter tuning* secara otomatis. Pada prosesnya, algoritma ini akan membuat sebuah *_n-dimensional search space_* yang terbentuk dari n *hyperparameter* dari sebuah model. Setiap titik yang terdapat pada *search space* mewakili satu konfigurasi atau perpaduan dari n *hyperparameter*. Algoritma ini bekerja dengan mengevaluasi setiap titik yang terdapat dalam search space untuk memperoleh konfigurasi *hyperparameter* yang paling optimal.
 
 Pada proyek ini akan dilakukan *Hyperparameter Tuning* dengan *Grid Search* untuk meningkatkan performa dari model *Random Forest* yang telah dikembangkan sebelumnya. Parameter yang digunakan pada *Hyperparamter Tuning* adalah sebagai berikut : 
 -   *random_state*: digunakan untuk mengontrol *random number generator* yang digunakan oleh model.
@@ -175,7 +165,7 @@ Berdasarkan eksperimen yang telah dilakukan pada tahapan pengembangan model, dip
 ## 📈 Evaluation
 Pada proyek *machine learning* ini evaluasi model akan menggunakan *confussion matrix*. *Confussion matrix* memberi gambaran bagaimana performa model pada berbagai kelas. Ia menunjukkan berapa banyak jumlah prediksi yang benar (*True*) dan salah (*False*) untuk setiap label. 
 
-Dengan menggunakan *confussion matrix*, kita dapat mengetahui seberapa baik performa dari model *machine learning* yang dikembangkan. Hasil dari *confussion matrix* ini akan digunakan untuk menghitung berbagai metrik lainnya, seperti *accuracy*, *precision*, *recall*, dan *F-1 score*.
+Dengan menggunakan *confussion matrix*, maka dapat diketahui seberapa baik performa dari model *machine learning* yang dikembangkan. Hasil dari *confussion matrix* ini akan digunakan untuk menghitung berbagai metrik lainnya, seperti *accuracy*, *precision*, *recall*, dan *F-1 score*.
 
 -  **Accuracy —** metrik evaluasi yang mengukur seberapa baik model membuat prediksi yang benar dari total prediksi yang dilakukan.
 - **Precision —** metrik evaluasi yang digunakan untuk mengukur berapa banyak model menghasilkan prediksi yang benar untuk suatu kelas tertentu. Precision didefinisikan sebagai perbandingan antara jumlah hasil prediksi yang benar untuk kelas tertentu dengan jumlah total prediksi untuk kelas tersebut.
@@ -185,6 +175,17 @@ Dengan menggunakan *confussion matrix*, kita dapat mengetahui seberapa baik perf
 Berdasarkan dengan konteks data, *problem statement*, dan solusi yang diimplementasikan, metrik evaluasi yang akan digunakan pada proyek machine learning ini adalah *Recall*. *Recall* adalah metrik yang digunakan untuk mengukur seberapa baik model dalam memprediksi suatu kelas tertentu. *Recall* dipilih dengan alasan bahwa algoritma *machine learning* / model memprediksi seseorang mengalami diabetes tetapi sebenarnya non-diabetes, daripada model salah memprediksi bahwa seseorang non-diabetes padahal sebenarnya dia adalah penderita diabetes. 
 
 
+Tabel 1. Classification Report (train dataset)
+|            	| precision 	| recall 	| f1-score 	| support 	|
+|:----------:	|:---------:	|:------:	|:--------:	|:-------:	|
+|      0     	|    0.99   	|  0.92  	|   0.96   	|   306   	|
+|      1     	|    0.93   	|  0.99  	|   0.96   	|   308   	|
+|  accuracy  	|           	|        	|   0.96   	|   614   	|
+|  macro avg 	|    0.96   	|  0.96  	|   0.96   	|   614   	|
+| weight avg 	|    0.96   	|  0.96  	|   0.96   	|   614   	|
+
+
+Tabel 2. Classification Report (test dataset)
 |            	| precision 	| recall 	| f1-score 	| support 	|
 |:----------:	|:---------:	|:------:	|:--------:	|:-------:	|
 |      0     	|    0.88   	|  0.79  	|   0.83   	|   133   	|
@@ -194,7 +195,17 @@ Berdasarkan dengan konteks data, *problem statement*, dan solusi yang diimplemen
 | weight avg 	|    0.84   	|  0.84  	|   0.84   	|   264   	|
 
 
-Pada proyek machine learning ini, model terbaik yang dikembangkan adalah model **Random Forest Classification** dengan **Hyperparameter Tuning Grid Search**, dengan *Recall* yang diperoleh yaitu 0.96 ( train dataset) dan 0.84 (test dataset).
+Berdasarkan tahapan evaluasi pada proyek machine learning ini, model terbaik yang dikembangkan adalah model **Random Forest Classification** dengan **Hyperparameter Tuning Grid Search**, dengan *Recall* yang diperoleh yaitu 0.96 (train dataset) dan 0.84 (test dataset). Model machine learning yang dikembangkan dengan metode *hyperparameter* ini dinilai mampu menjawab *problem statements* dan mencapai *goals* dari proyek yang sudah ditentukan sebelumnya. Sehingga diharapkan dengan adanya model *machine learning* ini dapat membantu memprediksi seseorang yang menderita diabetes.
+
+## References
+
+[1] Y. Yusransyah, S. N. Stiani, and A. N. Sabilla, “Hubungan Antara Kepatuhan Minum Obat Pasien Diabetes Mellitus dan Support yang Diberikan Keluarga,” *J. Ilm. Kesehat. Delima*, vol. 4, no. 2, pp. 74–77, 2022, doi: 10.60010/jikd.v4i2.79
+
+[2] F. Nuraisyah, “Faktor Risiko Diabetes Mellitus Tipe 2,” *J. Kebidanan dan Keperawatan Aisyiyah*, vol. 13, no. 2, pp. 120–127, 2018, doi: 10.31101/jkk.395
+
+[3] Lestari, Zulkarnain, and S. A. Sijid, “Diabetes Melitus: Review Etiologi, Patofisiologi, Gejala, Penyebab, Cara Pemeriksaan, Cara Pengobatan dan Cara Pencegahan,” *UIN Alauddin Makassar*, no. November, pp. 237–241, 2021.
+
+[4] M. Rejeki, “Analisis Komparatif Penyembuhan Penyakit Diabetes Melitus dengan Kombinasi Penggunaan Obat Herbal dan Konsumsi Nutrisi yang Tepat,” *Proceeding of The URECOL*, pp. 353–360, 2019.
 
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://syarifulmsth.github.io) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/syariful-musthofa/) [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
